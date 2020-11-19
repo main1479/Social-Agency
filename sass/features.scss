@@ -1,0 +1,39 @@
+.features{
+
+    @media only screen and (max-width: $mbl-port){
+        padding-top: 0;
+        margin-bottom: 0;
+     }
+
+    &__grid{
+        width: 100%;
+        max-width: 90rem;
+        margin: 0 auto;
+        padding: 3rem 4rem;
+        border-radius: 4rem;
+        background:linear-gradient(-90deg,$color-primary, $color-secondary);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        box-shadow: 0 2rem 8rem rgba($color-primary, .5);
+
+        &-item{
+            padding: 2rem 3rem;
+            &:nth-child(even){
+                border-left: 1px solid #f7f7f7;
+                border-right: 1px solid #f7f7f7;
+                @media only screen and (max-width: $tab-port){
+                    border: none;
+                    border-top: 1px solid #f7f7f7;
+                    border-bottom: 1px solid #f7f7f7;
+                 }
+            }
+        }
+
+        .p__text{
+            color: $text-dark;
+            line-height: 1.6;
+        }
+    }
+
+
+}

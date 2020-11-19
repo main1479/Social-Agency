@@ -1,0 +1,99 @@
+.easy{
+    position: relative;
+    overflow-x: hidden;
+    @media only screen and (max-width: $tab-port){
+        padding-bottom: 0 ;
+     }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-gap: 14rem;
+        align-items: center;
+        @media only screen and (max-width: $mbl-land){
+           grid-gap: 8rem;
+        }
+        @media only screen and (max-width: $tab-port){
+            padding-bottom: 0;
+         }
+    }
+
+    // &__content{
+        
+    //     .p__text{
+    //         line-height: 1.8;
+    //     }
+    // }
+
+    &__img{
+        position: relative;
+        img{
+            width: 110%;
+            display: block;
+            transform: translateX(-10%);
+            box-shadow: 0 2rem 8rem rgba($text-dark, .2);
+            @media only screen and (max-width: $tab-port){
+                width:100%;
+                transform: translateX(0);
+             }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 100px;
+            border-radius: 3rem;
+            background: linear-gradient(-90deg,$color-primary, $color-secondary);
+            top: 0;
+            transform: translateY(-50%);
+            right: -35%;
+            box-shadow: 0 0 5rem rgba($color-secondary, .4);
+            z-index: -1;
+        }
+
+    }
+
+    .easy__grid-2{
+        .easy__img{
+            img{
+                transform: translateX(0%);
+            }
+            &::before{
+                display: none;
+            }
+        } 
+
+        .easy__content{
+            h2.heading{
+                position: relative;
+    
+                &::before{
+                    background: linear-gradient(-90deg, $color-primary, $color-secondary);
+                    top: -1rem;
+                    left: inherit;
+                    right: 0;
+                }
+            }
+            .p__text{
+                line-height: 1.8;
+            }
+        }
+
+    }
+
+    .right-blob{ 
+        position: absolute;
+        width: 30%;
+        left: 0;
+        bottom:0;
+        z-index: -1;
+        transform: translateY(-15%);
+        @media only screen and (max-width: $tab-port){
+            display: none;
+         }
+    }
+}
+
+  
+  
+  

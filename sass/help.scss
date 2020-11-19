@@ -1,0 +1,35 @@
+.help{
+    padding: 0 0 8rem 0;
+    &__flex{
+        display: flex;
+        @media only screen and (max-width: $mbl-land){
+            flex-wrap: wrap;
+        }
+    } 
+
+    &__text-box{
+        width: 20rem;
+        margin-right: 7rem; 
+        @media only screen and (max-width: $mbl-land){
+            flex: 0 0 100%;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__items{
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));   
+        grid-gap: 5rem; 
+        text-align: center;
+        img{ 
+            width: 90%; 
+        }
+        
+        @media only screen and (max-width: $mbl-land){
+            flex: 0 0 100%;
+            order: 2;
+        }
+    }
+    
+}

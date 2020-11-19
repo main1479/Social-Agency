@@ -1,0 +1,61 @@
+.connect{
+    margin-bottom: 10rem;
+
+    &__grid{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media only screen and (max-width: $tab-port){
+            flex-wrap: wrap;
+         }
+    }
+    &__text-box{
+        flex: 0 0 45%;
+        padding-right: 2rem;
+        @media only screen and (max-width: $tab-port){
+            flex: 0 0 80%;
+         }
+        @media only screen and (max-width: $mbl-port){
+            flex: 0 0 100%;
+            margin-bottom: 5rem;
+         }
+    }
+    &__img{
+        flex: 0 0 10%;
+        @media only screen and (max-width: $tab-port){
+            flex: 0 0 20%;
+         }
+         @media only screen and (max-width: $mbl-port){
+            flex: 0 0 100%;
+            text-align: center;
+         }
+        img{
+            width: 130%;
+            @media only screen and (max-width: $tab-port){
+                width: 100%;
+                display: inline-block;
+             }
+            @media only screen and (max-width: $mbl-port){
+                width: auto;
+                // max-width: 30rem;
+                height: 30rem;
+                margin: 0 auto;
+             }
+        }
+    }
+    &__img-with-text{
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        flex: 0 0 40%;
+        padding-left: 5rem;
+        @media only screen and (max-width: $tab-port){
+            flex: 0 0 100%;
+            padding-left: 0;
+            margin-top: 5rem;
+         }
+        img{
+            width: 100%;
+        }
+    }
+}

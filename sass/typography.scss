@@ -1,0 +1,63 @@
+.heading{
+    color: $text-dark;
+    line-height: 1.2;
+
+    &-1{
+        font-weight: 400;
+        font-size: 4rem;
+        @media only screen and (max-width: $laptop-port){
+            font-size: 3.5rem;
+        }
+    }
+} 
+h2.heading{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.6;
+    position: relative;
+    @media only screen and (max-width: $laptop-port){
+        font-size: 2.5rem;
+    }
+    &.white{
+        color: #fff;
+    }
+    &.light{
+        font-weight: 200;
+        font-size: 4rem;
+        line-height: 1.2;
+        @media only screen and (max-width: $laptop-port){
+            font-size: 3.5rem;
+        }
+        @media only screen and (max-width: $tab-port){
+            font-size: 3rem;
+        }
+    }
+
+    &.indicator::before{
+        content: '';
+        position: absolute;
+        width: 3rem;
+        height: 4px;
+        border-radius: 3rem;
+        background: linear-gradient(-90deg,$color-primary, $color-secondary);
+        top: -1rem;
+        left: 0;
+    }
+}
+
+h4.heading{
+    font-size: 1.6rem; 
+    font-weight: 500;
+    &.white{
+        color: #fff;
+    }
+}
+
+.p__text{
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 2;
+    &.white{
+        color: #fff;
+    }
+}
